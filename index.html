@@ -1,0 +1,749 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>James Carter | Creative Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --teal: #3db1b2;
+  --orange: #ff873d;
+  --dark: #171717;
+  --gray: #777e88;
+  --light: #f4f6f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--light);
+  color: var(--dark);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin: auto;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 3%;
+  width: 94%;
+  height: 80px;
+  background: white;
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  z-index: 10;
+  box-shadow: 0 10px 30px #00000010;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 38px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nav-links a:hover {
+  color: var(--teal);
+}
+
+.buy-btn {
+  background: linear-gradient(#ffb74b, #ff813b);
+  color: white;
+  padding: 16px 30px;
+  border-radius: 40px;
+  font-weight: 700;
+  box-shadow: 0 3px 0 #ffcf94;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 800px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 150px;
+  background: linear-gradient(
+    165deg,
+    var(--teal) 0%,
+    var(--teal) 65%,
+    var(--light) 65.1%,
+    var(--light) 100%
+  );
+}
+
+.hero-content {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  height: 550px;
+  margin: auto;
+}
+
+.profile {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 15px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #a5d9d7;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.float {
+  position: absolute;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 70px;
+  box-shadow: 0 15px 35px #00000015;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 21px;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.float span {
+  font-size: 32px;
+}
+
+.uiux {
+  left: 5%;
+  top: 35px;
+}
+
+.hello {
+  right: 4%;
+  top: 20px;
+}
+
+.illustrations {
+  left: -7%;
+  top: 230px;
+}
+
+.photography {
+  right: -9%;
+  top: 200px;
+}
+
+.surf {
+  left: 12%;
+  bottom: 20px;
+  width: 125px;
+  height: 125px;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.quote {
+  right: 3%;
+  bottom: 45px;
+  font-size: 15px;
+  padding: 22px 28px;
+}
+
+.quote small {
+  display: block;
+  color: #a0a5ae;
+  font-size: 12px;
+}
+
+.intro {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 10px 20px 70px;
+}
+
+.eyebrow {
+  color: #ff7042;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+
+.intro h1 {
+  font-size: clamp(38px, 6vw, 62px);
+  line-height: 1.12;
+  letter-spacing: -3px;
+  margin-bottom: 25px;
+}
+
+.intro p {
+  color: var(--gray);
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* CONTACT STRIP */
+
+.contact-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 35px 0 55px;
+  border-bottom: 1px solid #e2e5e9;
+}
+
+.contact-strip small {
+  color: #9ba2ad;
+}
+
+.contact-strip strong {
+  display: block;
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.mail-btn {
+  background: var(--orange);
+  color: white;
+  width: 105px;
+  height: 65px;
+  border-radius: 40px;
+  display: grid;
+  place-items: center;
+  font-size: 27px;
+  box-shadow: 0 4px 0 #ffd5a0;
+}
+
+.socials {
+  display: flex;
+  gap: 22px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* PROJECTS */
+
+section {
+  padding: 100px 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 42px;
+  margin-bottom: 50px;
+  letter-spacing: -1.5px;
+}
+
+.section-title::before {
+  content: "";
+  width: 100px;
+  height: 3px;
+  background: var(--teal);
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+}
+
+.project {
+  background: white;
+  padding: 15px;
+  border-radius: 22px;
+  overflow: hidden;
+  transition: .35s;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px #00000012;
+}
+
+.project img {
+  width: 100%;
+  height: 310px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.project-info {
+  padding: 22px 10px 15px;
+}
+
+.project-info small {
+  color: var(--teal);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.project-info h3 {
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+/* ABOUT */
+
+.about {
+  background: white;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  height: 440px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.about-text h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  color: var(--gray);
+  line-height: 1.9;
+  margin-bottom: 25px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  background: var(--light);
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 80px 20px;
+  text-align: center;
+  background: #171717;
+  color: white;
+}
+
+footer h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+footer p {
+  color: #aaa;
+  margin-bottom: 30px;
+}
+
+footer a {
+  color: var(--orange);
+  font-weight: 700;
+}
+
+.back-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 5px 20px #0002;
+  z-index: 20;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    min-height: 850px;
+    background: linear-gradient(
+      165deg,
+      var(--teal) 0%,
+      var(--teal) 56%,
+      var(--light) 56.1%
+    );
+  }
+
+  .profile {
+    width: 340px;
+    height: 340px;
+    top: 70px;
+  }
+
+  .hero-content {
+    height: 490px;
+  }
+
+  .float {
+    font-size: 14px;
+    padding: 13px 18px;
+  }
+
+  .float span {
+    font-size: 22px;
+  }
+
+  .uiux { left: 0; top: 10px; }
+  .hello { right: 0; top: 0; }
+  .illustrations { left: 0; top: 300px; }
+  .photography { right: 0; top: 300px; }
+  .surf { left: 5%; bottom: 0; }
+  .quote { right: 0; bottom: 0; }
+
+  .contact-strip {
+    flex-wrap: wrap;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 500px) {
+  .navbar {
+    height: 68px;
+    padding: 0 16px;
+  }
+
+  .buy-btn {
+    padding: 12px 18px;
+    font-size: 12px;
+  }
+
+  .hero {
+    min-height: 760px;
+  }
+
+  .profile {
+    width: 275px;
+    height: 275px;
+    top: 85px;
+  }
+
+  .hero-content {
+    height: 400px;
+  }
+
+  .float {
+    font-size: 12px;
+    padding: 10px 13px;
+    gap: 7px;
+  }
+
+  .float span {
+    font-size: 17px;
+  }
+
+  .illustrations { top: 285px; }
+  .photography { top: 285px; }
+
+  .surf {
+    width: 75px;
+    height: 75px;
+  }
+
+  .quote {
+    font-size: 11px;
+    padding: 12px;
+  }
+
+  .intro h1 {
+    letter-spacing: -1.5px;
+  }
+
+  .intro p {
+    font-size: 15px;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  section {
+    padding: 65px 0;
+  }
+
+  .contact-strip {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .socials {
+    justify-content: center;
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="#" class="logo">◈</a>
+
+  <strong>J. Carter</strong>
+
+  <nav class="nav-links">
+    <a href="#works">Works</a>
+    <a href="#about">About</a>
+    <a href="#contact">Testimonials</a>
+    <a href="#contact">FAQ</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <a class="buy-btn" href="#contact">Hire Me ↗</a>
+</header>
+
+<!-- HERO -->
+
+<main>
+<div class="hero">
+
+  <div class="hero-content">
+
+    <div class="profile">
+      <img
+        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=900"
+        alt="Designer portrait">
+    </div>
+
+    <div class="float uiux">
+      <span>💻</span> UI/UX
+    </div>
+
+    <div class="float hello">
+      <span>👋</span> Hi there!
+    </div>
+
+    <div class="float illustrations">
+      <span>🎯</span> Illustrations
+    </div>
+
+    <div class="float photography">
+      <span>📸</span> Photography
+    </div>
+
+    <div class="float surf">
+      🏄
+    </div>
+
+    <div class="float quote">
+      <span>📬</span>
+      <div>
+        <small>Work with me</small>
+        <strong>Request a Quote</strong>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="intro">
+    <div class="eyebrow">HI THERE, I'M JAMES</div>
+
+    <h1>A product designer with passion for web</h1>
+
+    <p>
+      I create beautiful digital experiences that combine
+      creativity, strategy and technology. Let's make
+      something amazing together.
+    </p>
+  </div>
+
+</div>
+
+<!-- CONTACT -->
+
+<div class="container">
+  <div class="contact-strip">
+
+    <div>
+      <small>Let's get in touch</small>
+      <strong>hello@yourportfolio.com</strong>
+    </div>
+
+    <a class="mail-btn" href="mailto:hello@yourportfolio.com">
+      ✉
+    </a>
+
+    <div>
+      <small>Follow me</small>
+      <div class="socials" style="margin-top:12px">
+        <a href="#">TW</a>
+        <a href="#">FB</a>
+        <a href="#">IG</a>
+        <a href="#">DR</a>
+        <a href="#">BE</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- PROJECTS -->
+
+<section id="works">
+<div class="container">
+
+  <h2 class="section-title">Recent Projects</h2>
+
+  <div class="projects">
+
+    <article class="project">
+      <img
+        src="https://fluxa.pt/images/service-portfolio.jpg"
+        alt="Creative portfolio project">
+      <div class="project-info">
+        <small>WEB DESIGN · 2026</small>
+        <h3>Creative Digital Experience</h3>
+      </div>
+    </article>
+
+    <article class="project">
+      <img
+        src="https://cdn.dribbble.com/userupload/12284874/file/original-817f4ae56828e605aaf0c920109ca5d1.png"
+        alt="UI UX portfolio">
+      <div class="project-info">
+        <small>UI/UX DESIGN · 2026</small>
+        <h3>Modern Interface Design</h3>
+      </div>
+    </article>
+
+    <article class="project">
+      <img
+        src="https://y4pdgnepgswqffpt.public.blob.vercel-storage.com/templates/45952/1oWmMrpmsneKKCmBQ29g9udRV6U-8gg2uIkP5mruVYHu4Rz7iGAaecWKCs.jpg"
+        alt="Responsive design">
+      <div class="project-info">
+        <small>RESPONSIVE DESIGN</small>
+        <h3>Digital Brand Experience</h3>
+      </div>
+    </article>
+
+    <article class="project">
+      <img
+        src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000"
+        alt="Website dashboard">
+      <div class="project-info">
+        <small>PRODUCT DESIGN</small>
+        <h3>Dashboard & Analytics</h3>
+      </div>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+<div class="container about-grid">
+
+  <div class="about-image">
+    <img
+      src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000"
+      alt="Creative workspace">
+  </div>
+
+  <div class="about-text">
+    <div class="eyebrow">ABOUT ME</div>
+
+    <h2>Designing ideas into meaningful experiences.</h2>
+
+    <p>
+      I'm a creative designer passionate about creating
+      digital products that are visually engaging,
+      intuitive and functional.
+    </p>
+
+    <div class="tags">
+      <span>UI Design</span>
+      <span>UX Research</span>
+      <span>Web Design</span>
+      <span>Branding</span>
+      <span>Prototyping</span>
+    </div>
+  </div>
+
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer id="contact">
+  <div class="eyebrow">LET'S WORK TOGETHER</div>
+  <h2>Have a project in mind?</h2>
+  <p>Let's create something extraordinary together.</p>
+  <a href="mailto:hello@yourportfolio.com">
+    GET IN TOUCH ↗
+  </a>
+  <p style="margin-top:60px;font-size:12px">
+    © 2026 James Carter. All rights reserved.
+  </p>
+</footer>
+
+<a href="#" class="back-top" aria-label="Back to top">⌃</a>
+
+</body>
+</html>
